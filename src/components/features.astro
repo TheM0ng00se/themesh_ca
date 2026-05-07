@@ -1,0 +1,65 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "On-Prem Migrations",
+    description:
+      "Seamlessly move your on-premises workloads to the cloud with minimal disruption, following a proven migration framework tailored to your environment.",
+    icon: "bx:bxs-server",
+  },
+  {
+    title: "Cost Optimization",
+    description:
+      "Identify waste, right-size resources, and architect for efficiency so your cloud spend aligns with actual business needs.",
+    icon: "bx:bxs-dollar-circle",
+  },
+  {
+    title: "Cloud Security Assessments",
+    description:
+      "Get a clear picture of your cloud security posture with thorough assessments that surface risks and deliver actionable remediation plans.",
+    icon: "bx:bxs-shield-alt-2",
+  },
+  {
+    title: "HyperScaling",
+    description:
+      "Design and implement infrastructure that scales on demand, ensuring your platform performs reliably under any load.",
+    icon: "bx:bxs-rocket",
+  },
+  {
+    title: "Compliance",
+    description:
+      "Navigate complex regulatory requirements with confidence. We help you achieve and maintain compliance across frameworks like SOC 2, ISO 27001, and more.",
+    icon: "bx:bxs-check-shield",
+  },
+  {
+    title: "Switching Cloud Providers",
+    description:
+      "Moving from AWS to Azure, GCP, or beyond? We manage the full transition — architecture, data migration, and cutover — so nothing gets left behind.",
+    icon: "bx:bxs-cloud",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Where we can help
+  </h2>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

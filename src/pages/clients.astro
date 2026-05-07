@@ -1,0 +1,51 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+
+import bestbuy from "@/assets/client-bestbuy.webp";
+import c1 from "@/assets/client-c1.png";
+import lulu from "@/assets/client-lulu.webp";
+import odg from "@/assets/client-odg.png";
+import riot from "@/assets/client-riot.jpg";
+import sun from "@/assets/client-sun.png";
+import ubc from "@/assets/client-ubc.png";
+
+const clients = [
+  { name: "Best Buy", logo: bestbuy },
+  { name: "Riot Games", logo: riot },
+  { name: "Central 1", logo: c1 },
+  { name: "Open Door Group", logo: odg },
+  { name: "University of British Columbia", logo: ubc },
+  { name: "Sun Microsystems / Oracle", logo: sun },
+  { name: "", logo: null },
+  { name: "Lululemon", logo: lulu },
+];
+---
+
+<Layout title="Clients">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Clients</Fragment>
+      <Fragment slot="desc">
+        We're proud to have worked with some amazing organizations across a wide range of industries.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16 max-w-5xl mx-auto">
+      {clients.map((client) => (
+        client.logo ? (
+          <div class="flex items-center justify-center p-8 aspect-[3/2] bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <img
+              src={client.logo.src}
+              alt={client.name}
+              class="max-h-16 max-w-full object-contain mix-blend-multiply"
+            />
+          </div>
+        ) : (
+          <div class="aspect-[3/2]" />
+        )
+      ))}
+    </div>
+  </Container>
+</Layout>

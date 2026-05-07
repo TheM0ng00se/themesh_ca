@@ -1,0 +1,64 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "On-Prem Migrations",
+    description:
+      "Seamlessly move your on-premises workloads to the cloud with minimal disruption, following a proven migration framework tailored to your environment.",
+    icon: "bx:bxs-server",
+  },
+  {
+    title: "Cost Optimization",
+    description:
+      "Identify waste, right-size resources, and architect for efficiency so your cloud spend aligns with actual business needs.",
+    icon: "bx:bxs-dollar-circle",
+  },
+  {
+    title: "HyperScaling",
+    description:
+      "Design and implement infrastructure that scales on demand, ensuring your platform performs reliably under any load.",
+    icon: "bx:bxs-rocket",
+  },
+  {
+    title: "Switching Cloud Providers",
+    description:
+      "Moving from AWS to Azure, GCP, or beyond? We manage the full transition — architecture, data migration, and cutover — so nothing gets left behind.",
+    icon: "bx:bxs-cloud",
+  },
+];
+---
+
+<Layout title="Cloud Infrastructure">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Cloud Infrastructure</Fragment>
+      <Fragment slot="desc">
+        We design and build cloud environments that are simple, secure, and cost-effective — so you can scale with confidence. We work with the 3 major cloud providers and have industry-certified subject matter experts to assist you with your projects.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex justify-center items-center mt-10" style="gap: 120px;">
+      <Icon name="simple-icons:amazonaws" style="width: 96px; height: 96px;" class="text-slate-600" />
+      <Icon name="simple-icons:microsoftazure" style="width: 96px; height: 96px;" class="text-slate-600" />
+      <Icon name="simple-icons:googlecloud" style="width: 96px; height: 96px;" class="text-slate-600" />
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-16 mt-16 max-w-4xl mx-auto">
+      {services.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Container>
+</Layout>

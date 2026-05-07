@@ -1,0 +1,34 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Who we Are</Fragment>
+      <Fragment slot="desc">We're a small, passionate team with decades of hands-on experience across cloud and technology, working with all kinds of customer environments. Our team includes specialists in cloud, networking, cybersecurity, and compliance, so you're covered from every angle.</Fragment>
+    </Sectionhead>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Where we work</h2>
+      <p class="text-lg mt-4 text-slate-600">
+        We are based in Canada, but have clients across the globe and operate internationally.
+      </p>
+    </div>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">How to Reach Us</h2>
+      <p class="text-lg mt-4 text-slate-600">
+        Reach out through the 'contact us' button on our site or for general inquiries reach us at:
+      </p>
+      <address class="text-lg mt-4 text-slate-600 not-italic leading-relaxed">
+        <a href="mailto:general-inquiries@themesh.ca" class="text-indigo-600 hover:underline">general-inquiries@themesh.ca</a><br />
+        610-100 Esplanade East<br />
+        North Vancouver, BC, Canada<br />
+        V7L 4V1
+      </address>
+    </div>
+  </Container>
+</Layout>

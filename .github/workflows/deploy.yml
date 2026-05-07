@@ -30,6 +30,8 @@ jobs:
 
       - name: Build with Astro
         uses: withastro/action@v3   # Official Astro action
+        env:
+          PUBLIC_WEB3FORMS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_KEY }}
 
   deploy:
     needs: build
