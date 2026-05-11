@@ -1,0 +1,37 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+---
+
+<Layout title="Security Policy">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Security Policy</Fragment>
+      <Fragment slot="desc">How to responsibly report security vulnerabilities to The Mesh Consulting.</Fragment>
+    </Sectionhead>
+
+    <div class="mt-16 max-w-2xl mx-auto">
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold tracking-tight">Reporting a Vulnerability</h2>
+        <p class="text-lg mt-4 text-slate-600">
+          If you believe you have found a security vulnerability on this site, please report it to us at <a href="mailto:general-inquiries@themesh.ca" class="text-indigo-600 hover:underline">general-inquiries@themesh.ca</a>. We appreciate responsible disclosure and will respond as promptly as possible.
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold tracking-tight">Disclosure Policy</h2>
+        <p class="text-lg mt-4 text-slate-600">
+          Vulnerability reports shared with us will not be disclosed to any third parties without your explicit consent. We handle all reports confidentially.
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold tracking-tight">Testing Guidelines</h2>
+        <p class="text-lg mt-4 text-slate-600">
+          Security testing must not impact the availability or operation of our site. Any testing that modifies, degrades, or disrupts the site or its data is not permitted.
+        </p>
+      </div>
+    </div>
+  </Container>
+</Layout>

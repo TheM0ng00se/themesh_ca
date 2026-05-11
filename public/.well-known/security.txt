@@ -1,0 +1,5 @@
+Contact: mailto:general-inquiries@themesh.ca
+Expires: 2028-05-11T00:00:00.000Z
+Canonical: https://themesh.ca/.well-known/security.txt
+Preferred-Languages: en
+Policy: https://themesh.ca/security-policy
